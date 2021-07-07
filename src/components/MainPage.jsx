@@ -14,13 +14,15 @@ const MainPage = () => {
   return (
     <div>
       <button onClick={openModal}>Open Modal</button>
-      {isModal ? (
-        <Modal
-          headline={"Modal Headline prop"}
-          modalText={"Modal sample text prop"}
-          onClick={closeModal}
-        ></Modal>
-      ) : null}
+
+      <Modal
+        open={isModal}
+        headline={"Modal Headline prop"}
+        modalText={"Modal sample text prop"}
+        onClick={closeModal}
+      >
+        test modal child
+      </Modal>
     </div>
   );
 };

@@ -1,18 +1,20 @@
 import React from "react";
 import "./modal.css";
 
-const Modal = (props) => {
-  return (
-    <div className='modal-container'>
-      <div className='modal'>
-        <h2 className='modal-header'>{props.headline}</h2>
-        <p className='modal-text'>{props.modalText}</p>
-        <button onClick={props.onClick} className='modal-btn-close'>
-          close
-        </button>
+const Modal = ({ open, headline, onClick, modalText }) => {
+  if (!open) return null;
+  else
+    return (
+      <div className='modal-container'>
+        <div className='modal'>
+          <h2 className='modal-header'>{headline}</h2>
+          <p className='modal-text'>{modalText}</p>
+          <button onClick={onClick} className='modal-btn-close'>
+            close
+          </button>
+        </div>
       </div>
-    </div>
-  );
+    );
 };
 
 export default Modal;

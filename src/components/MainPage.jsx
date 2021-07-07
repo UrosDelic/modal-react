@@ -16,8 +16,7 @@ const MainPage = () => {
   return (
     <div>
       <button onClick={openModal}>Open Modal</button>
-      <Modal open={isModal} onClose={closeModal}>
-        <h2>Modal child headline</h2>
+      <Modal open={isModal} close={closeModal} title={"Sample Modal Title"}>
         <p>{modalText}</p>
         <button>test child button</button>
       </Modal>

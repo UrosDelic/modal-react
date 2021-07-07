@@ -21,9 +21,16 @@
   background-color: #fff;
   width: 600px;
   max-width: 100%;
-  padding: 30px 50px;
+  padding: 2px 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.x-close-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .modal-btn-close {
@@ -43,5 +50,6 @@
   cursor: pointer;
 }
 
-.x-close-container {
+.modal-items {
+  padding: 15px 20px;
 }

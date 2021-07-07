@@ -16,10 +16,12 @@ const MainPage = () => {
   return (
     <div>
       <button onClick={openModal}>Open Modal</button>
-      <Modal open={isModal} close={closeModal} title={"Sample Modal Title"}>
-        <p>{modalText}</p>
-        <button>test child button</button>
-      </Modal>
+      {isModal && (
+        <Modal close={closeModal} title={"Sample Modal Title"}>
+          <p>{modalText}</p>
+          <button>test child button</button>
+        </Modal>
+      )}
     </div>
   );
 };

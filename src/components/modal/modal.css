@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
-
 .modal-container {
-  font-family: "Libre Baskerville", serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +31,6 @@
 }
 
 .modal-btn-close {
-  font-size: 14px;
   max-width: 30%;
 }
 
@@ -44,6 +40,7 @@
 }
 
 .modal span {
+  font-size: 20px;
   cursor: pointer;
 }
 

@@ -16,15 +16,10 @@ const MainPage = () => {
   return (
     <div>
       <button onClick={openModal}>Open Modal</button>
-
-      <Modal
-        open={isModal}
-        headline={"Modal Headline prop"}
-        modalText={modalText}
-        onClose={closeModal}
-      >
-        <button>child button</button>
-        <p>test child sample text</p>
+      <Modal open={isModal} onClose={closeModal}>
+        <h2>Modal child headline</h2>
+        <p>{modalText}</p>
+        <button>test child button</button>
       </Modal>
     </div>
   );

@@ -1,14 +1,17 @@
 import React from "react";
 import "./modal.css";
 
-const Modal = ({ open, headline, onClose, modalText, children }) => {
+const Modal = ({ open, onClose, children }) => {
   if (!open) return null;
   else
     return (
-      <div className='modal-container'>
-        <div className='modal'>
-          <h2 className='modal-header'>{headline}</h2>
-          <p className='modal-text'>{modalText}</p>
+      <div className='modal-container' onClick={onClose}>
+        <div
+          className='modal'
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           {children}
           <button onClick={onClose} className='modal-btn-close'>
             close

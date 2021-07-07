@@ -1,7 +1,7 @@
 import React from "react";
 import "./modal.css";
 
-const Modal = ({ open, headline, onClick, modalText }) => {
+const Modal = ({ open, headline, onClose, modalText, children }) => {
   if (!open) return null;
   else
     return (
@@ -9,7 +9,8 @@ const Modal = ({ open, headline, onClick, modalText }) => {
         <div className='modal'>
           <h2 className='modal-header'>{headline}</h2>
           <p className='modal-text'>{modalText}</p>
-          <button onClick={onClick} className='modal-btn-close'>
+          {children}
+          <button onClick={onClose} className='modal-btn-close'>
             close
           </button>
         </div>

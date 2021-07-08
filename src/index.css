@@ -1,5 +1,9 @@
+.App {
+  text-align: center;
+}
+
 button {
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: lightskyblue;
   border-color: lightskyblue;
   border-radius: 5px;

@@ -17,7 +17,7 @@ const Modal = ({ title, close, children }) => {
         </div>
         <div className='modal-items'>
           <p className='modal-title'>{title}</p>
-          {children}
+          <div className='modal-children'>{children}</div>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React from "react";
 import "./modal.css";
 
-const Modal = ({ title, close, children }) => {
+const Modal = ({ title, close, children, closeOutside }) => {
   return (
-    <div className='modal-container' onClick={close}>
+    <div className='modal-container' onClick={closeOutside}>
       <div
         className='modal'
         onClick={(e) => {
@@ -16,7 +16,8 @@ const Modal = ({ title, close, children }) => {
           </span>
         </div>
         <div className='modal-items'>
-          <p className='modal-title'>{title}</p>
+          {title && <p className='modal-title'>{title}</p>}
+
           <div className='modal-children'>{children}</div>
         </div>
       </div>

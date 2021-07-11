@@ -4,6 +4,8 @@
 }
 
 button {
+  width: 300px;
+  margin: 3px;
   padding: 10px 15px;
   background-color: lightskyblue;
   border-color: lightskyblue;

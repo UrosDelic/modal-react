@@ -11,9 +11,9 @@
   width: 100%;
 }
 .modal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* display: flex;
+  flex-direction: column; */
+  /* align-items: center; */
   background-color: #fff;
   width: 600px;
   /* height: 2000px; */
@@ -59,9 +59,4 @@
 
 .modal-items {
   padding-bottom: 5px;
-}
-
-.modal-children {
-  font-size: 1em;
-  padding: 10px;
 }

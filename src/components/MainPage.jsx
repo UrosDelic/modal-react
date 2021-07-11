@@ -3,7 +3,11 @@ import Modal from "./modal/Modal";
 import ConfirmationDialog from "./Confirmation-dialog/ConfirmationDialog";
 
 const MainPage = () => {
-  const [isModal, setModal] = useState(true);
+  const [isModal, setModal] = useState(false);
+
+  if (isModal === true) {
+    document.body.style.overflow = "hidden";
+  } else document.body.style.overflow = "visible";
 
   const openModal = () => {
     setModal(true);
@@ -17,7 +21,7 @@ const MainPage = () => {
     <div>
       <button onClick={openModal}>Open Modal</button>
       {isModal && (
-        <Modal close={closeModal} preventCloseOnClickOutside>
+        <Modal close={closeModal}>
           <p>Confirmation Dialog</p>
           <ConfirmationDialog acceptText={"Accept"} declineText={"Decline"}></ConfirmationDialog>
         </Modal>

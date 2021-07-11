@@ -1,9 +1,12 @@
 import React from "react";
 import "./modal.css";
 
-const Modal = ({ title, close, children, childrenStyle }) => {
+const Modal = ({ title, close, children, preventCloseOnClickOutside, childrenStyle }) => {
   return (
-    <div className="modal-container" onClick={close}>
+    <div
+      className="modal-container"
+      onClick={preventCloseOnClickOutside === undefined ? close : null}
+    >
       <div
         className="modal"
         onClick={(e) => {

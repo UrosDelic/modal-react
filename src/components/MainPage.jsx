@@ -29,6 +29,9 @@ const MainPage = () => {
       {isModal && (
         <Modal close={closeModal} closeButton>
           <ConfirmationDialog
+            acceptAction={() => {
+              alert("Action Accepted");
+            }}
             dialogText={"Sample dialog text"}
             acceptText={"Accept"}
             declineText={"Decline"}

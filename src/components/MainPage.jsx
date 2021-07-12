@@ -8,7 +8,11 @@ const MainPage = () => {
   useEffect(() => {
     if (isModal === true) {
       document.body.style.overflow = "hidden";
-    } else document.body.style.overflow = "unset";
+      document.body.style.paddingRight = "17px";
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "0px";
+    }
   }, [isModal]);
 
   const openModal = () => {
@@ -23,7 +27,7 @@ const MainPage = () => {
     <div>
       <button onClick={openModal}>Open Modal</button>
       {isModal && (
-        <Modal close={closeModal} closeButton preventClosingOutside>
+        <Modal close={closeModal} closeButton>
           <ConfirmationDialog
             dialogText={"Sample dialog text"}
             acceptText={"Accept"}

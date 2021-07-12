@@ -1,3 +1,6 @@
+:root {
+  --main-blue-color: lightskyblue;
+}
 .App {
   height: 20000px;
   text-align: center;
@@ -7,8 +10,8 @@ button {
   width: 300px;
   margin: 3px;
   padding: 10px 15px;
-  background-color: lightskyblue;
-  border-color: lightskyblue;
+  background-color: var(--main-blue-color);
+  border-color: var(--main-blue-color);
   border-radius: 5px;
   cursor: pointer;
 }

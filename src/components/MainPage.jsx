@@ -23,7 +23,7 @@ const MainPage = () => {
     <div>
       <button onClick={openModal}>Open Modal</button>
       {isModal && (
-        <Modal close={closeModal} closeButton>
+        <Modal close={closeModal} closeButton preventClosingOutside>
           <ConfirmationDialog
             dialogText={"Sample dialog text"}
             acceptText={"Accept"}

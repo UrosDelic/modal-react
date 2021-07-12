@@ -30,7 +30,10 @@ const MainPage = () => {
         <Modal close={closeModal} closeButton>
           <ConfirmationDialog
             acceptAction={() => {
-              alert("Action Accepted");
+              alert("Modal will stay opened");
+            }}
+            declineAction={() => {
+              alert("Modal will close");
               setModal(false);
             }}
             dialogText={"Sample dialog text"}

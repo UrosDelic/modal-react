@@ -31,6 +31,7 @@ const MainPage = () => {
           <ConfirmationDialog
             acceptAction={() => {
               alert("Action Accepted");
+              setModal(false);
             }}
             dialogText={"Sample dialog text"}
             acceptText={"Accept"}

@@ -1,44 +1,36 @@
 import React, { useState, useEffect } from "react";
-import Modal from "./modal/Modal";
 import ConfirmationDialog from "./Confirmation-dialog/ConfirmationDialog";
 
 const MainPage = () => {
-  const [isModal, setModal] = useState(false);
+  const [isDialog, setDialog] = useState(true);
 
-  useEffect(() => {
-    if (isModal === true) {
-      document.body.classList.add("lock");
-    } else {
-      document.body.classList.remove("lock");
-    }
-  }, [isModal]);
+  useEffect(() => {}, []);
 
-  const openModal = () => {
-    setModal(true);
+  const openDialog = () => {
+    setDialog(true);
   };
 
-  const closeModal = () => {
-    setModal(false);
+  const closeDialog = () => {
+    setDialog(false);
   };
 
   return (
     <div>
-      <button onClick={openModal}>Open Modal</button>
-      {isModal && (
-        <Modal close={closeModal} closeButton>
-          <ConfirmationDialog
-            acceptAction={() => {
-              alert("Modal will stay opened");
-            }}
-            declineAction={() => {
-              alert("Modal will close");
-              setModal(false);
-            }}
-            dialogText={"Sample dialog text"}
-            acceptText={"Accept"}
-            declineText={"Decline"}
-          ></ConfirmationDialog>
-        </Modal>
+      <button onClick={openDialog}>Open Dialog</button>
+      {isDialog && (
+        <ConfirmationDialog
+          close={closeDialog}
+          acceptAction={() => {
+            alert("Dialog will stay opened");
+          }}
+          declineAction={() => {
+            alert("Dialog will close");
+            setDialog(false);
+          }}
+          dialogText={"Sample dialog text"}
+          acceptText={"Accept"}
+          declineText={"Decline"}
+        ></ConfirmationDialog>
       )}
     </div>
   );

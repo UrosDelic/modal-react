@@ -1,0 +1,1 @@
+ preventClosingOutside === undefined || preventClosingOutside === false ? close : null

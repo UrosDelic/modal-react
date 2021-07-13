@@ -1,5 +1,7 @@
 :root {
   --main-blue-color: lightskyblue;
+  --box-shadow-color: rgba(0, 0, 0, 0.2);
+  --main-background-color: rgba(44, 166, 248, 0.185);
 }
 .App {
   height: 20000px;
@@ -8,20 +10,20 @@
 
 button {
   width: 10rem;
-  margin: 3px;
-  padding: 10px 15px;
+  margin: 0.3rem;
+  padding: 0.6rem 0.9rem;
   background-color: var(--main-blue-color);
   border-color: var(--main-blue-color);
-  border-radius: 5px;
+  border-radius: 0.3rem;
   cursor: pointer;
 }
 body.lock {
-  padding-right: 17px;
-  overflow: hidden;
+  padding-right: 1rem;
+  /* overflow: hidden; */
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1080px) {
   body.lock {
-    padding-right: 0px;
-    overflow: auto;
+    padding-right: 0rem;
+    /* overflow: auto; */
   }
 }

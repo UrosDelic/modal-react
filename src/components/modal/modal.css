@@ -3,26 +3,27 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  background-color: rgba(44, 166, 248, 0.185);
-  backdrop-filter: blur(2px);
+  background-color: var(--main-background-color);
+  backdrop-filter: blur(0.15rem);
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
 }
+
 .modal {
   overflow-y: auto;
   background-color: #fff;
-  width: 600px;
+  width: 38rem;
   max-height: 30%;
   max-width: 90%;
-  padding-bottom: 5px;
-  padding-top: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin: 0px 40px;
+  padding-bottom: 0.3rem;
+  padding-top: 0rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.15rem 0.25rem var(--box-shadow-color);
+  margin: 0rem 2.5rem;
   animation: fade 0.5s;
 }
 @keyframes fade {
@@ -42,21 +43,21 @@
   flex-direction: row;
   justify-content: flex-end;
   width: 100%;
-  height: 2vh;
-  margin-bottom: 5px;
+  height: 0.02rem;
+  margin-bottom: 0.3rem;
 }
 
 .modal-btn-close {
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
 .modal-title {
-  padding: 5px;
+  padding: 0.3rem;
   font-size: 2.5em;
   margin: 0;
 }
 
 .modal-items {
-  padding-bottom: 5px;
+  padding-bottom: 0.3rem;
 }

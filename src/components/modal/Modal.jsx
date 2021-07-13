@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./modal.css";
 
-const Modal = ({ title, close, children, preventClosingOutside, childrenStyle, closeButton }) => {
+const Modal = ({ title, close, children, preventClosingOutside, removeCloseButton }) => {
+  useEffect(() => {
+    document.body.classList.add("lock");
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.classList.remove("lock");
+      document.body.style.overflow = "auto";
+    };
+  }, []);
   return (
     <div
       className='modal-container'
-      onClick={
-        preventClosingOutside === undefined || preventClosingOutside === false ? close : null
-      }
+      onClick={!preventClosingOutside && (close ? close : undefined)}
     >
       <div
         className='modal'
@@ -15,7 +21,7 @@ const Modal = ({ title, close, children, preventClosingOutside, childrenStyle, c
           e.stopPropagation();
         }}
       >
-        {closeButton && (
+        {!removeCloseButton && (
           <div className='x-close-container'>
             <span onClick={close} className='modal-btn-close'>
               x
@@ -24,8 +30,7 @@ const Modal = ({ title, close, children, preventClosingOutside, childrenStyle, c
         )}
         <div className='modal-items'>
           {title && <p className='modal-title'>{title}</p>}
-
-          <div className={childrenStyle}>{children}</div>
+          {children}
         </div>
       </div>
     </div>

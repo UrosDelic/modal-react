@@ -3,6 +3,7 @@
   --box-shadow-color: rgba(0, 0, 0, 0.2);
   --main-background-color: rgba(44, 166, 248, 0.185);
 }
+
 .App {
   height: 20000px;
   text-align: center;
@@ -19,7 +20,7 @@ button {
   border-radius: 0.3rem;
   cursor: pointer;
 }
-
+/* 
 .noscroll {
   padding-right: 1rem;
 }
@@ -27,4 +28,8 @@ button {
   .noscroll {
     padding-right: 0;
   }
-}
+} */
+
+/* podsetnik for later */
+/* document.body.style.position =' fixed';
+document.body.style.top = -${window.scrollY}px; */

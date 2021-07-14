@@ -8,6 +8,7 @@ const ConfirmationDialog = ({
   declineText,
   dialogText,
   close,
+  children,
 }) => {
   return (
     <Modal close={close}>
@@ -19,6 +20,7 @@ const ConfirmationDialog = ({
         <button onClick={declineAction} className='decline-btn'>
           {declineText}
         </button>
+        {children}
       </div>
     </Modal>
   );

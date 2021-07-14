@@ -3,10 +3,10 @@ import "./modal.css";
 
 const Modal = ({ title, close, children, preventClosingOutside, removeCloseButton }) => {
   useEffect(() => {
-    document.body.classList.add("lock");
+    document.body.classList.add("noscroll");
     document.body.style.overflow = "hidden";
     return () => {
-      document.body.classList.remove("lock");
+      document.body.classList.remove("noscroll");
       document.body.style.overflow = "auto";
     };
   }, []);

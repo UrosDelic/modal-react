@@ -17,6 +17,7 @@ const MainPage = () => {
   return (
     <div>
       <button onClick={openDialog}>Open Dialog</button>
+
       {isDialog && (
         <ConfirmationDialog
           close={closeDialog}

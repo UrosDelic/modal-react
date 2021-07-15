@@ -29,8 +29,8 @@ const MainPage = () => {
             setIsDialogOpened(false);
           }}
           dialogText={"Sample dialog text"}
-          acceptText={"Accept"}
-          declineText={"Decline"}
+          acceptButtonText={"Accept"}
+          declineButtonText={"Decline"}
         >
           {/* <button>test scroll</button>
           <button>test scroll</button>

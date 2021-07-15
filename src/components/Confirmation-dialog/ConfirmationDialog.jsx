@@ -5,7 +5,7 @@ const ConfirmationDialog = ({
   acceptAction,
   declineAction,
   acceptButtonText,
-  declineButonText,
+  declineButtonText,
   dialogText,
   close,
   children,
@@ -18,7 +18,7 @@ const ConfirmationDialog = ({
           {acceptButtonText}
         </button>
         <button onClick={declineAction} className='decline-btn'>
-          {declineButonText}
+          {declineButtonText}
         </button>
         {children}
       </div>

@@ -33,7 +33,14 @@ const MainPage = () => {
           dialogText={"Sample dialog text"}
           acceptText={"Accept"}
           declineText={"Decline"}
-        ></ConfirmationDialog>
+        >
+          <button>asdsadasdaasd</button>
+          <button>asdsadasdaasd</button>
+          <button>asdsadasdaasd</button>
+          <button>asdsadasdaasd</button>
+          <button>asdsadasdaasd</button>
+          <button>asdsadasdaasd</button>
+        </ConfirmationDialog>
       )}
     </div>
   );

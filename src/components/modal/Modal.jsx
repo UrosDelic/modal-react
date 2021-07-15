@@ -12,9 +12,13 @@ const Modal = ({ title, close, children, preventClosingOutside, removeCloseButto
     };
   }, []);
   return (
+    // onClick={!preventClosingOutside && (close ? close : undefined)}
+    // preventClosingOutside === undefined || preventClosingOutside === false ? close : null
     <div
       className='modal-container'
-      onClick={!preventClosingOutside && (close ? close : undefined)}
+      onClick={
+        preventClosingOutside === undefined || preventClosingOutside === false ? close : null
+      }
     >
       <div
         className='modal'

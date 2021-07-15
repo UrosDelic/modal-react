@@ -24,7 +24,7 @@
   padding-right: 0.3rem;
   border-radius: 0.3rem;
   box-shadow: 0 0.15rem 0.25rem var(--box-shadow-color);
-  margin: 0rem 2.5rem;
+  /* margin: 0rem 2.5rem; */
   animation: fade 0.5s;
 }
 @keyframes fade {

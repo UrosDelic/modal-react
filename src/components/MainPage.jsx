@@ -15,8 +15,10 @@ const MainPage = () => {
   };
 
   return (
-    <div>
-      <button onClick={openDialog}>Open Dialog</button>
+    <div className='main-page'>
+      <div className='main-page-content'>
+        <button onClick={openDialog}>Open Dialog</button>
+      </div>
 
       {isDialog && (
         <ConfirmationDialog

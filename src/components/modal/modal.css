@@ -12,6 +12,7 @@
 }
 
 .modal {
+  text-align: center;
   overflow-y: auto;
   background-color: #fff;
   width: 40rem;

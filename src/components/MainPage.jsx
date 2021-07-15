@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ConfirmationDialog from "./Confirmation-dialog/ConfirmationDialog";
 
 const MainPage = () => {
-  const [isDialog, setDialog] = useState(true);
+  const [isDialog, setDialog] = useState(false);
 
   useEffect(() => {}, []);
 
@@ -15,10 +15,8 @@ const MainPage = () => {
   };
 
   return (
-    <div className='main-page'>
-      <div className='main-page-content'>
-        <button onClick={openDialog}>Open Dialog</button>
-      </div>
+    <div>
+      <button onClick={openDialog}>Open Dialog</button>
 
       {isDialog && (
         <ConfirmationDialog
@@ -34,12 +32,12 @@ const MainPage = () => {
           acceptText={"Accept"}
           declineText={"Decline"}
         >
-          {/* <button>asdsadasdaasd</button>
-          <button>asdsadasdaasd</button>
-          <button>asdsadasdaasd</button>
-          <button>asdsadasdaasd</button>
-          <button>asdsadasdaasd</button>
-          <button>asdsadasdaasd</button> */}
+          {/* <button>test scroll</button>
+          <button>test scroll</button>
+          <button>test scroll</button>
+          <button>test scroll</button>
+          <button>test scroll</button>
+          <button>test scroll</button> */}
         </ConfirmationDialog>
       )}
     </div>

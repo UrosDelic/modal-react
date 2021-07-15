@@ -2,23 +2,23 @@ import React, { useState, useEffect } from "react";
 import ConfirmationDialog from "./Confirmation-dialog/ConfirmationDialog";
 
 const MainPage = () => {
-  const [isDialog, setDialog] = useState(false);
+  const [isDialogOpened, setIsDialogOpened] = useState(false);
 
   useEffect(() => {}, []);
 
   const openDialog = () => {
-    setDialog(true);
+    setIsDialogOpened(true);
   };
 
   const closeDialog = () => {
-    setDialog(false);
+    setIsDialogOpened(false);
   };
 
   return (
     <div>
       <button onClick={openDialog}>Open Dialog</button>
 
-      {isDialog && (
+      {isDialogOpened && (
         <ConfirmationDialog
           close={closeDialog}
           acceptAction={() => {
@@ -26,7 +26,7 @@ const MainPage = () => {
           }}
           declineAction={() => {
             alert("Dialog will close");
-            setDialog(false);
+            setIsDialogOpened(false);
           }}
           dialogText={"Sample dialog text"}
           acceptText={"Accept"}

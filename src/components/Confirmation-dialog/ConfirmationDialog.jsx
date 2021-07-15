@@ -4,8 +4,8 @@ import Modal from "../modal/Modal";
 const ConfirmationDialog = ({
   acceptAction,
   declineAction,
-  acceptText,
-  declineText,
+  acceptButtonText,
+  declineButonText,
   dialogText,
   close,
   children,
@@ -15,10 +15,10 @@ const ConfirmationDialog = ({
       <div>
         {dialogText && <h4 className='dialog-text'>{dialogText}</h4>}
         <button onClick={acceptAction} className='accept-btn'>
-          {acceptText}
+          {acceptButtonText}
         </button>
         <button onClick={declineAction} className='decline-btn'>
-          {declineText}
+          {declineButonText}
         </button>
         {children}
       </div>

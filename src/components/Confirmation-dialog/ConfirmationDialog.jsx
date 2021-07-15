@@ -11,7 +11,7 @@ const ConfirmationDialog = ({
   children,
 }) => {
   return (
-    <Modal close={close} preventClosingOutside>
+    <Modal close={close}>
       <div>
         {dialogText && <h4 className='dialog-text'>{dialogText}</h4>}
         <button onClick={acceptAction} className='accept-btn'>

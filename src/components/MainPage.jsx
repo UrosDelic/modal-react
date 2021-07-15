@@ -34,12 +34,12 @@ const MainPage = () => {
           acceptText={"Accept"}
           declineText={"Decline"}
         >
+          {/* <button>asdsadasdaasd</button>
           <button>asdsadasdaasd</button>
           <button>asdsadasdaasd</button>
           <button>asdsadasdaasd</button>
           <button>asdsadasdaasd</button>
-          <button>asdsadasdaasd</button>
-          <button>asdsadasdaasd</button>
+          <button>asdsadasdaasd</button> */}
         </ConfirmationDialog>
       )}
     </div>

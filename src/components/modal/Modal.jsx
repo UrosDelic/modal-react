@@ -3,12 +3,9 @@ import "./modal.css";
 
 const Modal = ({ title, close, children, preventClosingOutside, removeCloseButton }) => {
   useEffect(() => {
-    document.body.style.position = "fixed";
-    document.body.style.overflowY = "scroll";
-
+    document.body.classList.add("no-scroll");
     return () => {
-      document.body.style.position = "static";
-      document.body.style.overflowY = "auto";
+      document.body.classList.remove("no-scroll");
     };
   }, []);
   return (

@@ -4,7 +4,8 @@
   justify-content: center;
   position: fixed;
   background-color: var(--main-background-color);
-  backdrop-filter: blur(0.15rem);
+  backdrop-filter: blur(0.1rem);
+  -webkit-backdrop-filter: blur(0.1rem);
   top: 0;
   left: 0;
   height: 100%;
@@ -18,13 +19,12 @@
   width: 40rem;
   max-height: 30%;
   max-width: 90%;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.5rem;
   padding-top: 0rem;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-  border-radius: 0.3rem;
-  box-shadow: 0 0.15rem 0.25rem var(--box-shadow-color);
-  /* margin: 0rem 2.5rem; */
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0.5rem var(--box-shadow-color);
   animation: fade 0.5s;
 }
 @keyframes fade {
@@ -44,8 +44,8 @@
   flex-direction: row;
   justify-content: flex-end;
   width: 100%;
-  height: 0.02rem;
-  margin-bottom: 0.3rem;
+  height: 0.05rem;
+  margin-bottom: 0.5rem;
 }
 
 .modal-btn-close {
@@ -54,11 +54,11 @@
 }
 
 .modal-title {
-  padding: 0.3rem;
+  padding: 0.5rem;
   font-size: 2.5em;
   margin: 0;
 }
 
 .modal-items {
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.5rem;
 }
